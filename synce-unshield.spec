@@ -63,10 +63,10 @@ Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
 %description libs-static
-Static RAPI library.
+Static Unshield library.
 
 %description libs-static -l pl
-Statyczna biblioteka RAPI.
+Statyczna biblioteka Unshield.
 
 %prep
 %setup -q -n %{_realname}-%{version}
