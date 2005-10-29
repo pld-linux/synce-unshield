@@ -16,7 +16,6 @@ BuildRequires:	automake >= 1.4
 BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.213
 Requires:	%{name}-libs = %{version}
-ExcludeArch:	%{x8664} alpha ia64 ppc64 s390x sparc64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -91,8 +90,8 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p /sbin/ldconfig
-%postun	-p /sbin/ldconfig
+%post	libs -p /sbin/ldconfig
+%postun	libs -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
