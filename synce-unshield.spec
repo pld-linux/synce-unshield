@@ -15,7 +15,7 @@ BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.4
 BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.213
-Requires:	%{name}-libs = %{version}
+Requires:	%{name}-libs = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,7 +36,7 @@ Unshield jest narzêdziem stworzonym do tego celu.
 %package libs
 Summary:	The Unshield library
 Summary(pl):	Biblioteka Unshield
-Group:		Development/Libraries
+Group:		Libraries
 
 %description libs
 The Unshield library.
@@ -60,7 +60,7 @@ Pliki nag³ówkowe biblioteki Unshield.
 Summary:	Static Unshield library
 Summary(pl):	Statyczna biblioteka Unshield
 Group:		Development/Libraries
-Requires:	%{name}-libs = %{version}-%{release}
+Requires:	%{name}-libs-devel = %{version}-%{release}
 
 %description libs-static
 Static Unshield library.
