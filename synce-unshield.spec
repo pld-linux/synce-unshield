@@ -2,7 +2,7 @@
 %define	_realname	unshield
 
 Summary:	SynCE Unshield - a tool to extract InstallShield Cabinet files
-Summary(pl.UTF-8):   SynCE Unshield - narzędzie do rozpakowywania archiwów InstallShield
+Summary(pl.UTF-8):	SynCE Unshield - narzędzie do rozpakowywania archiwów InstallShield
 Name:		synce-%{_realname}
 Version:	0.5
 Release:	1
@@ -35,7 +35,7 @@ Unshield jest narzędziem stworzonym do tego celu.
 
 %package libs
 Summary:	The Unshield library
-Summary(pl.UTF-8):   Biblioteka Unshield
+Summary(pl.UTF-8):	Biblioteka Unshield
 Group:		Libraries
 
 %description libs
@@ -46,7 +46,7 @@ Biblioteka Unshield.
 
 %package libs-devel
 Summary:	Header files for the Unshield library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki Unshield
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Unshield
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
@@ -58,7 +58,7 @@ Pliki nagłówkowe biblioteki Unshield.
 
 %package libs-static
 Summary:	Static Unshield library
-Summary(pl.UTF-8):   Statyczna biblioteka Unshield
+Summary(pl.UTF-8):	Statyczna biblioteka Unshield
 Group:		Development/Libraries
 Requires:	%{name}-libs-devel = %{version}-%{release}
 
