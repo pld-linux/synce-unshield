@@ -2,7 +2,7 @@
 %define	_realname	unshield
 
 Summary:	SynCE Unshield - a tool to extract InstallShield Cabinet files
-Summary(pl):	SynCE Unshield - narzêdzie do rozpakowywania archiwów InstallShield
+Summary(pl.UTF-8):   SynCE Unshield - narzÄ™dzie do rozpakowywania archiwÃ³w InstallShield
 Name:		synce-%{_realname}
 Version:	0.5
 Release:	1
@@ -26,46 +26,46 @@ InstallShield Cabinet Files in order to be able to install the
 applications without access to Microsoft Windows. Unshield is a
 solution that allows to perform this task.
 
-%description -l pl
+%description -l pl.UTF-8
 Instalator stworzony przez oprogramowanie InstallShield przechowuje
-pliki do zainstalowania wewn±trz plików InstallShield Cabinet. Jest
-po¿±dane, by da³o siê rozpakowaæ zawarto¶æ plików InstallShield
-Cabinet w celu instalacji aplikacji bez dostêpu do Microsoft Windows.
-Unshield jest narzêdziem stworzonym do tego celu.
+pliki do zainstalowania wewnÄ…trz plikÃ³w InstallShield Cabinet. Jest
+poÅ¼Ä…dane, by daÅ‚o siÄ™ rozpakowaÄ‡ zawartoÅ›Ä‡ plikÃ³w InstallShield
+Cabinet w celu instalacji aplikacji bez dostÄ™pu do Microsoft Windows.
+Unshield jest narzÄ™dziem stworzonym do tego celu.
 
 %package libs
 Summary:	The Unshield library
-Summary(pl):	Biblioteka Unshield
+Summary(pl.UTF-8):   Biblioteka Unshield
 Group:		Libraries
 
 %description libs
 The Unshield library.
 
-%description libs -l pl
+%description libs -l pl.UTF-8
 Biblioteka Unshield.
 
 %package libs-devel
 Summary:	Header files for the Unshield library
-Summary(pl):	Pliki nag³ówkowe biblioteki Unshield
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki Unshield
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
 %description libs-devel
 Header files for the Unshield library.
 
-%description libs-devel -l pl
-Pliki nag³ówkowe biblioteki Unshield.
+%description libs-devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki Unshield.
 
 %package libs-static
 Summary:	Static Unshield library
-Summary(pl):	Statyczna biblioteka Unshield
+Summary(pl.UTF-8):   Statyczna biblioteka Unshield
 Group:		Development/Libraries
 Requires:	%{name}-libs-devel = %{version}-%{release}
 
 %description libs-static
 Static Unshield library.
 
-%description libs-static -l pl
+%description libs-static -l pl.UTF-8
 Statyczna biblioteka Unshield.
 
 %prep
