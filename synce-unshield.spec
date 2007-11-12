@@ -1,15 +1,13 @@
-
-%define	_realname	unshield
-
 Summary:	SynCE Unshield - a tool to extract InstallShield Cabinet files
 Summary(pl.UTF-8):	SynCE Unshield - narzędzie do rozpakowywania archiwów InstallShield
-Name:		synce-%{_realname}
+Name:		synce-unshield
 Version:	0.5
-Release:	1
+Release:	2
 License:	MIT
 Group:		Applications
-Source0:	http://dl.sourceforge.net/synce/%{_realname}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/synce/unshield-%{version}.tar.gz
 # Source0-md5:	ff6bb0fbe962bc00e230592c910b90ce
+Patch0:		%{name}-pc.patch
 URL:		http://www.synce.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.4
@@ -69,7 +67,8 @@ Static Unshield library.
 Statyczna biblioteka Unshield.
 
 %prep
-%setup -q -n %{_realname}-%{version}
+%setup -q -n unshield-%{version}
+%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -108,6 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libunshield.la
 %{_includedir}/libunshield.h
 %{_aclocaldir}/unshield.m4
+%{_pkgconfigdir}/libunshield.pc
 
 %files libs-static
 %defattr(644,root,root,755)
