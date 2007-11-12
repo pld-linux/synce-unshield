@@ -1,0 +1,45 @@
+--- unshield-0.5/Makefile.am~	2003-08-22 21:07:05.000000000 +0300
++++ unshield-0.5/Makefile.am	2007-11-12 02:50:36.838070805 +0200
+@@ -7,6 +7,9 @@
+ m4datadir = $(datadir)/aclocal
+ m4data_DATA = unshield.m4
+ 
++pkgconfigdir = $(libdir)/pkgconfig
++pkgconfig_DATA = libunshield.pc
++
+ EXTRA_DIST = $(m4data_DATA)
+ 
+ SUBDIRS = lib src .
+--- unshield-0.5/configure.ac~	2005-07-08 17:51:09.000000000 +0300
++++ unshield-0.5/configure.ac	2007-11-12 02:51:12.388621195 +0200
+@@ -97,6 +97,7 @@
+ CHECK_ZLIB()
+ 
+ AC_OUTPUT([Makefile
++		   libunshield.pc
+            lib/md5/Makefile
+            lib/Makefile
+            src/Makefile])
+--- unshield-0.5/configure.ac.in~	2005-07-08 17:51:09.000000000 +0300
++++ unshield-0.5/configure.ac.in	2007-11-12 02:51:12.388621195 +0200
+@@ -97,6 +97,7 @@
+ CHECK_ZLIB()
+ 
+ AC_OUTPUT([Makefile
++		   libunshield.pc
+            lib/md5/Makefile
+            lib/Makefile
+            src/Makefile])
+--- /dev/null	2006-03-28 14:00:37.000000000 +0300
++++ unshield/libunshield.pc.in	2007-11-12 02:48:15.005874971 +0200
+@@ -0,0 +1,10 @@
++prefix=@prefix@
++exec_prefix=@exec_prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name: libunshield
++Description: Library to extract CAB files from InstallShield installers
++Version: @VERSION@
++Libs: -L${libdir} -lunshield
++Cflags: -I${includedir}
