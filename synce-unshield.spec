@@ -1,13 +1,12 @@
 Summary:	SynCE Unshield - a tool to extract InstallShield Cabinet files
 Summary(pl.UTF-8):	SynCE Unshield - narzędzie do rozpakowywania archiwów InstallShield
 Name:		synce-unshield
-Version:	0.5
-Release:	3
+Version:	0.6
+Release:	1
 License:	MIT
 Group:		Applications
 Source0:	http://dl.sourceforge.net/synce/unshield-%{version}.tar.gz
-# Source0-md5:	ff6bb0fbe962bc00e230592c910b90ce
-Patch0:		%{name}-pc.patch
+# Source0-md5:	31a829192a255160d1f71cda4c865c9c
 URL:		http://www.synce.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.4
@@ -68,7 +67,6 @@ Statyczna biblioteka Unshield.
 
 %prep
 %setup -q -n unshield-%{version}
-%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -95,18 +93,19 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc LICENSE README* TODO
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/unshield
+%{_mandir}/man1/unshield.1*
 
 %files libs
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libunshield.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libunshield.so.?
 
 %files libs-devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libunshield.so
 %{_libdir}/libunshield.la
 %{_includedir}/libunshield.h
-%{_aclocaldir}/unshield.m4
 %{_pkgconfigdir}/libunshield.pc
 
 %files libs-static
