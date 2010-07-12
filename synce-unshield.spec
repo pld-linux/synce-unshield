@@ -5,13 +5,14 @@ Version:	0.6
 Release:	1
 License:	MIT
 Group:		Applications
-Source0:	http://dl.sourceforge.net/synce/unshield-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/synce/unshield-%{version}.tar.gz
 # Source0-md5:	31a829192a255160d1f71cda4c865c9c
 URL:		http://www.synce.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.4
 BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.213
+BuildRequires:	zlib-devel
 Requires:	%{name}-libs = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -75,7 +76,6 @@ Statyczna biblioteka Unshield.
 %{__autoheader}
 %{__automake}
 %configure
-
 %{__make}
 
 %install
@@ -99,7 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 %files libs
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libunshield.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libunshield.so.?
+%attr(755,root,root) %ghost %{_libdir}/libunshield.so.0
 
 %files libs-devel
 %defattr(644,root,root,755)
