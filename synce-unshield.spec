@@ -4,7 +4,7 @@ Name:		synce-unshield
 Version:	0.6
 Release:	2
 License:	MIT
-Group:		Applications
+Group:		Applications/File
 Source0:	http://downloads.sourceforge.net/synce/unshield-%{version}.tar.gz
 # Source0-md5:	31a829192a255160d1f71cda4c865c9c
 URL:		http://www.synce.org/
