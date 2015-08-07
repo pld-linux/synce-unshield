@@ -2,7 +2,7 @@ Summary:	SynCE Unshield - a tool to extract InstallShield Cabinet files
 Summary(pl.UTF-8):	SynCE Unshield - narzędzie do rozpakowywania archiwów InstallShield
 Name:		synce-unshield
 Version:	0.6
-Release:	2
+Release:	3
 License:	MIT
 Group:		Applications/File
 Source0:	http://downloads.sourceforge.net/synce/unshield-%{version}.tar.gz
